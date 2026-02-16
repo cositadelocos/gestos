@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arturito Web - Control de Gestos</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- MediaPipe Hands -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <!-- Three.js (para 3D) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Arturito Web</h1>
+        <p id="status">Cargando modelos...</p>
+
+        <div class="video-container">
+            <video class="input_video"></video>
+            <canvas class="output_canvas" width="640px" height="480px"></canvas>
+            <div id="gesture-overlay">Esperando...</div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn">Iniciar Cámara</button>
+        </div>
+    </div>
+
+    <!-- Elementos ocultos para usar como texturas/sonidos -->
+    <img id="imgJordano" src="jordano.png" style="display:none;">
+    <img id="imgPiolin" src="piolin.png" style="display:none;">
+    <audio id="audioMusica" src="musica.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
